@@ -46,7 +46,7 @@ if st.session_state.current_q < len(questions):
             st.session_state.score += 1
 
         st.session_state.current_q += 1
-        st.experimental_rerun()
+        st.rerun()
 else:
     st.subheader("✅ Quiz Completed!")
     st.success(f"Your Score: {st.session_state.score} / {len(questions)}")
@@ -63,4 +63,4 @@ else:
         st.session_state.current_q = 0
         st.session_state.score = 0
         st.session_state.answers = []
-        st.experimental_rerun()
+        st.rerun()
